@@ -73,8 +73,8 @@ namespace Cob.Umb.NavBuilder
         {
             Content = content;
             Index = index;
-            Current = parent.Current;
-            Options = parent.Options;
+            Current = current;
+            Options = options;
             if (parent != null) this.parent = parent;
             if (children != null) this.children = children;
         }
