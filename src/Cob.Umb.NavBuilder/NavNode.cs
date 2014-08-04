@@ -87,7 +87,7 @@ namespace Cob.Umb.NavBuilder
             {
                 if (root == null)
                 {
-                    var ancestorOrSelf = Content.AncestorOrSelf();
+                    var ancestorOrSelf = Content.AncestorOrSelf(1);
 
                     if (ancestorOrSelf.Id == this.Id)
                         root = this;
@@ -329,7 +329,7 @@ namespace Cob.Umb.NavBuilder
             get
             {
                 return (Options.ShowAllNodes
-                    || Current.IsAncestor(Content)
+                    || Content.IsAncestorOrSelf(Current)
                     || this.IsNavigationExpanded
                     || this.IsAllNavigationExpanded)
                     && (this.HasChildren && this.Level < Options.MaxLevel);
