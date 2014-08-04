@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web;
-using umbraco.cms.businesslogic.media;
 using Umbraco.Core.Models;
 using Umbraco.Web;
 
