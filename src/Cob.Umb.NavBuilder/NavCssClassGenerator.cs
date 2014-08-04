@@ -8,11 +8,11 @@ namespace Cob.Umb.NavBuilder
 {
     class NavCssClassGenerator
     {
-        private NavNode _node;
+        private NavNode node;
 
         public NavCssClassGenerator(NavNode node)
         {
-            this._node = node;
+            this.node = node;
         }
 
         internal string Generate()
@@ -20,31 +20,31 @@ namespace Cob.Umb.NavBuilder
             string output = string.Empty;
             var classes = new HashSet<string>();
 
-            if (_node.IsCurrent)
+            if (node.IsCurrent)
                 classes.Add("selected");
 
-            if (_node.HasChildren)
+            if (node.HasChildren)
             {
                 classes.Add("parent");
 
-                if (_node.IsOpen)
+                if (node.IsOpen)
                     classes.Add("open");
                 else
                     classes.Add("closed");
             }
 
-            if (_node.IsFirst)
+            if (node.IsFirst)
                 classes.Add("first");
 
-            if (_node.IsLast)
+            if (node.IsLast)
                 classes.Add("last");
 
-            if (_node.IsEven)
+            if (node.IsEven)
                 classes.Add("even");
             else
                 classes.Add("odd");
 
-            if (_node.HasImage)
+            if (node.HasImage)
                 classes.Add("image");
 
             if (classes.Count > 0)
