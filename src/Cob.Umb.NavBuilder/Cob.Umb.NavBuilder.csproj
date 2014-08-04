@@ -202,6 +202,7 @@
     <Compile Include="NavBuilderOptions.cs" />
     <Compile Include="NavCssClassGenerator.cs" />
     <Compile Include="NavNode.cs" />
+    <Compile Include="NavNodeExtensions.cs" />
     <Compile Include="NavNodeTraverser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

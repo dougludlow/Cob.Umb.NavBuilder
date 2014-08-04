@@ -20,26 +20,26 @@ namespace Cob.Umb.NavBuilder
             string output = string.Empty;
             var classes = new HashSet<string>();
 
-            if (node.IsCurrent)
+            if (node.IsCurrent())
                 classes.Add("selected");
 
             if (node.HasChildren)
             {
                 classes.Add("parent");
 
-                if (node.IsOpen)
+                if (node.IsOpen())
                     classes.Add("open");
                 else
                     classes.Add("closed");
             }
 
-            if (node.IsFirst)
+            if (node.IsFirst())
                 classes.Add("first");
 
-            if (node.IsLast)
+            if (node.IsLast())
                 classes.Add("last");
 
-            if (node.IsEven)
+            if (node.IsEven())
                 classes.Add("even");
             else
                 classes.Add("odd");
