@@ -47,6 +47,9 @@ namespace Cob.Umb.NavBuilder
             if (node.HasImage)
                 classes.Add("image");
 
+            if (node.IsExternal())
+                classes.Add("external");
+
             if (classes.Count > 0)
                 output = string.Join(" ", classes);
 

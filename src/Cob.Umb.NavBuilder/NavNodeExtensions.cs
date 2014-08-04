@@ -53,5 +53,10 @@ namespace Cob.Umb.NavBuilder
         {
             return !node.IsEven();
         }
+
+        public static bool IsExternal(this NavNode node)
+        {
+            return node.Options.UseAbsoluteUrls ? !node.Url.StartsWith(NavNode.BaseUrl) : node.Url.StartsWith("http://");
+        }
     }
 }
