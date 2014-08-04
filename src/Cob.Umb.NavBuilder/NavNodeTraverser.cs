@@ -8,16 +8,16 @@ namespace Cob.Umb.NavBuilder
 {
     class NavNodeTraverser
     {
-        private NavNode _root;
+        private NavNode root;
 
         public NavNodeTraverser(NavNode root)
         {
-            _root = root;
+            this.root = root;
         }
 
         public string Traverse()
         {
-            return Traverse(_root);
+            return Traverse(this.root);
         }
 
         private string Traverse(NavNode node)
