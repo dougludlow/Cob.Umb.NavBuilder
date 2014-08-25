@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cob.Umb.NavBuilder", "Cob.Umb.NavBuilder\Cob.Umb.NavBuilder.csproj", "{6AF01EA1-7EC1-439F-B36D-8ABEDCA47513}"
 EndProject
@@ -15,6 +15,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "package", "package", "{ED0FC3A8-A9A2-49EF-8FC3-95F715EBA1E8}"
 	ProjectSection(SolutionItems) = preProject
 		..\package\BuildPackage.bat = ..\package\BuildPackage.bat
+		..\package\Cob.Umb.NavBuilder.0.10.0.0.nupkg = ..\package\Cob.Umb.NavBuilder.0.10.0.0.nupkg
 		..\package\Cob.Umb.NavBuilder.0.9.0.0.nupkg = ..\package\Cob.Umb.NavBuilder.0.9.0.0.nupkg
 		..\package\Cob.Umb.NavBuilder.0.9.5.0.nupkg = ..\package\Cob.Umb.NavBuilder.0.9.5.0.nupkg
 		Cob.Umb.NavBuilder\Cob.Umb.NavBuilder.nuspec = Cob.Umb.NavBuilder\Cob.Umb.NavBuilder.nuspec
