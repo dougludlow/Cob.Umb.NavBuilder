@@ -81,5 +81,12 @@ namespace Cob.Umb.NavBuilder
             this.options.UseAbsoluteUrls = flag;
             return this;
         }
+
+        public NavBuilder AddRootCssClasses(params string[] classes)
+        {
+            if (classes != null)
+                this.options.ExcludedParentTypes.AddRange(classes.Where(a => !string.IsNullOrWhiteSpace(a)));
+            return this;
+        }
     }
 }
