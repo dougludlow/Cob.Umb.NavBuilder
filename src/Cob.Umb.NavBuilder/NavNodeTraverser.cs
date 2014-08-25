@@ -26,7 +26,7 @@ namespace Cob.Umb.NavBuilder
 
             if (node.IsTraverseable)
             {
-                menu.Append("<ul>");
+                menu.Append(string.Format("<ul{0}>", GetRootCssClasses(node)));
                 foreach (var child in node.Children)
                 {
                     string name = HttpUtility.HtmlEncode(child.Name);
@@ -42,6 +42,11 @@ namespace Cob.Umb.NavBuilder
             }
 
             return menu.ToString();
+        }
+
+        private string GetRootCssClasses(NavNode node)
+        {
+            return node.Options.RootCssClasses.Count > 0 ? " " + string.Join(" ", node.Options.RootCssClasses) : "";
         }
     }
 }
