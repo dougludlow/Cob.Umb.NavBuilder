@@ -85,7 +85,7 @@ namespace Cob.Umb.NavBuilder
         public NavBuilder AddRootCssClasses(params string[] classes)
         {
             if (classes != null)
-                this.options.ExcludedParentTypes.AddRange(classes.Where(a => !string.IsNullOrWhiteSpace(a)));
+                this.options.RootCssClasses.AddRange(classes.Where(a => !string.IsNullOrWhiteSpace(a)));
             return this;
         }
     }
