@@ -46,7 +46,7 @@ namespace Cob.Umb.NavBuilder
 
         private string GetRootCssClasses(NavNode node)
         {
-            return node.Options.RootCssClasses.Count > 0 ? " " + string.Join(" ", node.Options.RootCssClasses) : "";
+            return node.Options.RootCssClasses.Count > 0 ? string.Format(" class=\"{0}\"", string.Join(" ", node.Options.RootCssClasses)) : "";
         }
     }
 }
