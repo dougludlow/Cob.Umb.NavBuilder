@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/dougludlow/umbraco-navbuilder</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Public release.</releaseNotes>
+    <releaseNotes>- Fix root css class being applied to every level.</releaseNotes>
     <copyright>Copyright City of Boise 2014</copyright>
     <tags>Umbraco NavBuilder</tags>
   </metadata>

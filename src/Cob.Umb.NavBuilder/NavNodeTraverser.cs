@@ -26,7 +26,11 @@ namespace Cob.Umb.NavBuilder
 
             if (node.IsTraverseable)
             {
-                menu.Append(string.Format("<ul{0}>", GetRootCssClasses(node)));
+                if (node.IsHome)
+                    menu.Append(string.Format("<ul{0}>", GetRootCssClasses(node)));
+                else
+                    menu.Append("<ul>");
+
                 foreach (var child in node.Children)
                 {
                     string name = HttpUtility.HtmlEncode(child.Name);
