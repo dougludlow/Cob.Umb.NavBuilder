@@ -235,7 +235,7 @@ namespace Cob.Umb.NavBuilder
                                         break;
 
                                     case LinkType.External:
-                                        url = urlPicker.Url;
+                                        url = urlPicker.Url ?? url;
                                         break;
                                 }
                             }
