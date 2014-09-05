@@ -22,7 +22,7 @@ namespace Cob.Umb.NavBuilder
             }
         }
 
-        public static UmbracoHelper UmbracoHelper = new UmbracoHelper(UmbracoContext.Current);
+        public UmbracoHelper Umbraco = new UmbracoHelper(UmbracoContext.Current);
 
         public IPublishedContent Content { get; private set; }
         public NavBuilderOptions Options { get; private set; }
@@ -45,7 +45,7 @@ namespace Cob.Umb.NavBuilder
 
         public NavNode(int id, NavBuilderOptions options)
         {
-            var content = UmbracoHelper.TypedContent(id);
+            var content = Umbraco.TypedContent(id);
             Init(content, content, 0, null, null, options);
         }
 
@@ -191,7 +191,7 @@ namespace Cob.Umb.NavBuilder
                         int id;
                         if (int.TryParse(navImage, out id))
                         {
-                            var media = UmbracoHelper.TypedMedia(id);
+                            var media = Umbraco.TypedMedia(id);
                             if (media.Id != 0)
                                 image = media.GetPropertyValue<string>("umbracoFile");
                         }
@@ -211,7 +211,7 @@ namespace Cob.Umb.NavBuilder
             {
                 if (url == null)
                 {
-                    url = UmbracoHelper.NiceUrl(Content.Id);
+                    url = Umbraco.NiceUrl(Content.Id);
 
                     if (Content.DocumentTypeAlias == "Link")
                     {
@@ -226,12 +226,12 @@ namespace Cob.Umb.NavBuilder
                                 {
                                     case LinkType.Content:
                                         if (urlPicker.Id.HasValue)
-                                            url = UmbracoHelper.NiceUrl(urlPicker.Id.Value);
+                                            url = Umbraco.NiceUrl(urlPicker.Id.Value);
                                         break;
 
                                     case LinkType.Media:
                                         if (urlPicker.Id.HasValue)
-                                            url = UmbracoHelper.TypedMedia(urlPicker.Id).GetPropertyValue<string>("umbracoFile");
+                                            url = Umbraco.TypedMedia(urlPicker.Id).GetPropertyValue<string>("umbracoFile");
                                         break;
 
                                     case LinkType.External:
