@@ -140,14 +140,6 @@ namespace Cob.Umb.NavBuilder
                 yield return new NavNode(node, index++, this);
         }
 
-        public IPublishedContent IPublishedContent
-        {
-            get
-            {
-                return Content;
-            }
-        }
-
         public int Id
         {
             get
